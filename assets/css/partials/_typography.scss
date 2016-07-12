@@ -1,0 +1,43 @@
+/* Typography
+   ========================================================================== */
+
+*{
+	  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: "Merriweather-Bold";
+    src: url(../fonts/Merriweather-Bold.otf);
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Montserrat-Regular";
+	margin: 0;
+}
+
+h1 { font-size: 98px; }
+h2 { font-size: 46px; }
+h3 { font-size: 40px; }
+h4 { font-size: 22px; }
+h5 { font-size: 20px; text-align: center;}
+h6 { font-size: 18px; }
+p { font-size: 16px; }
+
+li, a, p {
+	font-family: "Montserrat-Regular";
+}

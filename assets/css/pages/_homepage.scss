@@ -1,0 +1,200 @@
+/* Homepage
+   ========================================================================== */
+
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+.about-us {
+	background-color: $dark-white;
+	
+	.background {
+		color: $gray;
+		position: absolute;
+		top: 35px;
+		left: 12%;
+
+		h1 {
+			font-family: "Merriweather-Bold" !important;
+		}
+	}
+
+	.contents {
+		padding: 20px 0 10px 0;
+		position: relative;
+		margin-top: 40px;
+		height: 190px;
+		max-height: 190px;
+
+		h2{
+			padding-right: 5%;
+			display: inline-block;
+		}
+		
+		.line {
+			border-top: 1px solid #30353b;
+			padding-top:5px;
+			padding-bottom: 5px;
+			margin: 35px auto 0;
+			width: 10%;
+			position: absolute;
+			left: -12%;
+
+			&::after {
+				content: "";
+				width: 10px;
+				height: 10px;
+				background: #30353b;
+				border-radius: 5px;
+				position: absolute;
+				top: -6px;
+				right: 0;
+			}
+		}
+	}
+
+	.social-icons {
+		a {			
+			display: inline;
+
+			i {
+				color: $gray;
+				padding: 15px 10px 20px;
+			}
+
+			&:hover{
+				i{
+				    color: $red;
+				}
+			}
+		}
+
+		.line {
+			border-top: 3px solid $gray;
+			padding-bottom: 9px;
+			width: 5%;
+			display: inline-block;
+		}
+	}
+}
+
+#typed{
+	$textcolor: null;
+	$x : random(3);
+
+	@if $x==1 {
+		$textcolor : $blue;
+	} @elseif $x==2 {
+		$textcolor : $red;
+	} @elseif $x==3 {
+		$textcolor : $orange;
+	} @else {
+		$textcolor : $purple;
+	}	
+
+	color: $textcolor;
+	font-size: 50px;
+
+}
+
+.typed-cursor{
+	opacity: 1;
+    font-weight: 100;
+    @include animation('blink 0.7s infinite');	    
+}
+
+@include keyframes(blink){
+	0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@media screen and (max-width: 991px) {
+	.about-us{
+		.background {
+			top: 50px;
+			left: 10%;
+
+			h1 {
+				font-size: 80px;
+			}			
+		}
+	}
+
+	.contents{
+		h2{
+			font-size: 41px;
+		}
+	}
+
+	#typed{
+		font-size: 41px;		
+	}
+}
+
+@media screen and (max-width: 768px) {
+	
+	.about-us {
+		padding-left: 10%;
+
+		.background {
+			top: 70px;
+			left: 0;
+			position: absolute;
+
+			h1 {
+				font-size: 50px;
+			}
+		}
+
+		.contents {
+			position: relative;
+			max-height: none;
+			height: auto;
+
+			.line {
+				border-top: 1px solid #30353b;
+				padding-top:5px;
+				padding-bottom: 5px;
+				margin: 25px auto 0;
+				width: 50px;
+				position: absolute;
+				left: -60px;
+				}
+
+			.line:after {
+					content: "";
+					width: 10px;
+					height: 10px;
+					background: #30353b;
+					border-radius: 5px;
+					position: absolute;
+					top: -6px;
+				}
+			
+			h2 {
+				font-size: 33px;
+				line-height: 44px;
+				}
+
+			
+			}
+
+			.social-icons {
+
+			.line {
+				border-top: 3px solid $gray;
+				padding-top:5px;
+				padding-bottom: 5px;
+				width: 50px;
+				display: inline-block;
+			}
+		}
+	}
+
+	#typed{
+		font-size: 33px;		
+	}
+	
+}
